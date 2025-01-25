@@ -20,9 +20,7 @@
   display: flex;
   flex-direction: row;
   justify-content: right;
-  /* height: 30vh; */
   overflow: hidden;
-  /* margin-bottom: 1rem; */
 }
 
 .footer-1-left {
@@ -42,8 +40,35 @@
   margin-left: 0.1rem;
 }
 
-.footer-1-left input[type="checkbox"] {
-  display: inline-block;
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-box {
+  width: 1rem;
+  height: 1rem;
+  background-color: #f0f0f0;
+  border: 0.1rem solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+input[type="checkbox"]:checked + label .checkbox-box::after {
+  content: "✓";
+  color: var(--dark-grey);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.text-for-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .checkbox-text {
@@ -131,12 +156,13 @@
   grid-template-rows: 1fr;
 }
 
+/* subFooter */
+
 .subFooter {
   display: flex;
   flex-direction: column;
   background-color: var(--black);
   color: var(--dark-grey);
-  /* border-top: var(--dark-grey) 0.1px solid; */
   position: relative;
   text-align: right;
   padding: 2.5rem;
@@ -147,12 +173,12 @@
 .subFooter::before {
   content: "";
   position: absolute;
-  top: 0; /* Place it at the top */
-  left: 5%; /* Center horizontally */
-  width: 90.7%; /* Set width to 90% */
-  height: 1px; /* Height of the border */
+  top: 0;
+  left: 5%;
+  width: 90.7%;
+  height: 1px;
   background-color: var(--dark-grey);
-  opacity: 0.3; /* Set opacity */
+  opacity: 0.3;
 }
 
 .subFooter .left {
@@ -285,6 +311,7 @@
     display: none;
   }
 
+  /* subFooter */
   .subFooter {
     flex-direction: row;
     justify-content: space-evenly;

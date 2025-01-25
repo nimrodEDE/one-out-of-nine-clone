@@ -246,9 +246,9 @@ nav svg {
   left: -22rem;
   flex-direction: row;
   width: 33rem;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245, 0.95);
   border-radius: 1rem;
-  /* backdrop-filter: blur(0.5rem); */
+  backdrop-filter: blur(9px);
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s ease, visibility 0.5s ease;
