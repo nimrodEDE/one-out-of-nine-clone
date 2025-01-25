@@ -259,6 +259,11 @@
     margin-top: 1rem;
   }
 
+  .icons-desktop > *:hover {
+    background-color: var(--pink);
+    border-radius: 50%;
+  }
+
   .icons-desktop > *:not(:first-child) {
     margin-top: 1rem;
     margin-left: 0.5rem;

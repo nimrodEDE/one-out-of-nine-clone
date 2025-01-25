@@ -18,12 +18,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--white);
+  background-color: rgb(253, 253, 253, 0.7);
   position: fixed;
   top: 0;
   left: 0;
   right: 0; /* Ensures it spans the full width */
   z-index: 1000; /* Makes sure the navbar stays above other content */
+  backdrop-filter: blur(1rem);
 }
 
 body {
@@ -283,5 +284,15 @@ nav svg {
   }
   #searchBarMobile {
     display: none;
+  }
+
+  .links.links-left .line {
+    opacity: 0.3;
+    font-size: 0.5rem;
+    margin-inline: 0.5rem;
+  }
+
+  .cart:hover path {
+    stroke: #e93380;
   }
 }
