@@ -8,6 +8,7 @@ const searchMobile = document.querySelector(".search-right");
 const logoImg = document.querySelector(".logoImg");
 const cartIcon = document.querySelector("#cartNav");
 const searchBarMobileIcon = document.querySelector("#searchBarMobileIcon");
+const searchElement = document.querySelector(".search");
 
 const hamburger = document.querySelector(".hamburger");
 const sideMenu = document.querySelector(".side-menu");
@@ -15,11 +16,14 @@ const xIcon = document.querySelector(".xIcon");
 
 const sideMenuIcons = [hamburger, xIcon];
 
+const vectorRight = document.querySelector(".vectorRight");
+
 sideMenuIcons.forEach((icon) => {
   console.log(icon);
 
   icon.addEventListener("click", () => {
-    sideMenu.classList.toggle("hidden");
+    sideMenu.classList.toggle("notHere");
+    subMenu.classList.add("hidden");
   });
 });
 
@@ -45,6 +49,7 @@ function toggleDesktopSearch() {
   // Toggle visibility for desktop elements
   navTextInputDesktop.classList.toggle("hidden");
   navMenu.classList.toggle("hidden");
+  searchElement.classList.toggle("active");
 }
 
 // Function to toggle mobile search
@@ -57,6 +62,7 @@ function toggleMobileSearch() {
   cartIcon.classList.toggle("hidden");
   searchBarMobileIcon.classList.toggle("hidden");
   searchMobile.classList.toggle("hidden");
+  searchElement.classList.toggle("active");
 }
 
 function handleResize() {
@@ -95,9 +101,14 @@ const firstMenuItem = document.getElementById("first-menu-item");
 // Select the sub-menu
 const subMenu = document.getElementById("sub-menu-1");
 // Select the back button
+
 // Show the sub-menu when "אני בריאה" is clicked
 firstMenuItem.addEventListener("click", () => {
   subMenu.classList.remove("hidden");
+});
+
+vectorRight.addEventListener("click", () => {
+  subMenu.classList.add("hidden");
 });
 
 // Add event listeners
