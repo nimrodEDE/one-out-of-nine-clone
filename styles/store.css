@@ -29,7 +29,7 @@
 
 .grid-card {
   position: relative;
-  min-width: 17.213rem; /* Keeps the card size fixed */
+  min-width: 14.815rem; /* Keeps the card size fixed */
   max-width: 1fr; /* Optional: Makes them responsive */
 }
 

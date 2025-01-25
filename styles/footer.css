@@ -36,9 +36,10 @@
 
 .footer-1-left input[type="email"] {
   height: 3rem;
-  width: 80%;
+  width: 75%;
   border: none;
   border-radius: 0.5rem;
+  margin-left: 0.1rem;
 }
 
 .footer-1-left input[type="checkbox"] {
@@ -93,7 +94,7 @@
 
 .icons-mobile {
   text-align: right;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .icons-mobile > * {

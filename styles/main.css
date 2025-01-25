@@ -43,7 +43,7 @@ main {
 }
 
 .hero h1 {
-  margin: 2rem 0 3rem;
+  margin: 0rem 0 3rem;
 }
 
 .desc {
@@ -63,6 +63,7 @@ main {
 
 .subGrid {
   font-weight: bold;
+  margin-bottom: 1.8rem;
 }
 
 .store {
