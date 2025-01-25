@@ -220,12 +220,12 @@ nav svg {
   position: absolute;
   top: 3rem;
   display: flex;
-  left: -19rem;
+  left: -22rem;
   flex-direction: row;
-  width: 35rem;
-  background-color: rgb(245, 245, 245, 0.9);
+  width: 33rem;
+  background-color: rgb(245, 245, 245);
   border-radius: 1rem;
-  backdrop-filter: blur(0.5rem);
+  /* backdrop-filter: blur(0.5rem); */
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -237,6 +237,10 @@ nav svg {
 
 .popup-right {
   padding: 1rem;
+}
+
+.popup-right > * {
+  line-height: 1.8rem;
 }
 
 /* .popup-right ul li {
