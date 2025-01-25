@@ -1,0 +1,179 @@
+:root {
+  --black: #3f3f3f;
+  --white: #fdfdfd;
+  --pink: #e93380;
+  --creame: #ebeae4;
+  --cream-2: #f3f2ec;
+  --light-grey: #f5f5f5;
+  --grey: #dfdfdf;
+  --dark-grey: #a4a4a4;
+  --form-text-grey: #828282;
+  --font-almoni-regular: "Almoni-regular";
+  --font-almoni-medium: "Almoni-medium";
+  --font-almoni-bold: "Almoni-bold";
+}
+
+.arrow-container {
+  display: none;
+}
+
+.grid-card img {
+  background-color: var(--creame);
+  border-radius: 1rem;
+  transition: border-radius 200ms ease;
+}
+
+.grid-card img:hover {
+  border-radius: 2rem;
+}
+
+.grid-card {
+  position: relative;
+  min-width: 17.213rem; /* Keeps the card size fixed */
+  max-width: 1fr; /* Optional: Makes them responsive */
+}
+
+.grid-card-cart {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* stroke: #e93380; */
+}
+
+.grid-card-cart:hover svg path {
+  stroke: #e93380;
+}
+
+.sale::before {
+  content: "מבצע!";
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background-color: var(--pink);
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  width: 4rem;
+  border-radius: 0.1rem;
+}
+
+.grid-card a {
+  font-weight: 600;
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 0.2rem solid var(--pink);
+}
+
+.storeGrid {
+  margin-top: 2rem;
+  overflow: auto;
+  grid-auto-flow: column;
+  display: grid;
+  gap: 1rem;
+}
+
+.leftHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 1.3rem;
+}
+
+.grid-card img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .grid-card {
+    min-width: 20.313rem; /* Keeps the card size fixed */
+  }
+
+  .storeHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .arrow-container {
+    background-color: var(
+      --pink
+    ); /* Adjust this to your desired background color */
+    position: relative;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex; /* Center the arrows */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow {
+    position: absolute;
+    transition: transform 0.4s ease; /* Add a hover animation */
+  }
+
+  /* arrow animations */
+
+  /* left arrow */
+
+  .arrow-left-1 {
+    transform: translateX(30px);
+  }
+
+  .arrow-left-2 {
+    transform: translateX(0px);
+  }
+
+  .arrow-container:hover .arrow-left-1 {
+    transform: translateX(0) scale(1.1); /* Slightly enlarge and center arrows on hover */
+  }
+
+  .arrow-container:hover .arrow-left-2 {
+    transform: translateX(-30px);
+  }
+
+  /* right arrow */
+
+  .arrow-right-1 {
+    transform: translateX(0px);
+  }
+
+  .arrow-right-2 {
+    transform: translateX(-30px); /* Offset the second arrow slightly */
+  }
+
+  .arrow-container:hover .arrow-right-2 {
+    transform: translateX(0) scale(1.1); /* Slightly enlarge and center arrows on hover */
+  }
+
+  .arrow-container:hover .arrow-right-1 {
+    transform: translateX(30px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .storeHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .grid-card {
+    min-width: 17rem;
+  }
+
+  .storeGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+}

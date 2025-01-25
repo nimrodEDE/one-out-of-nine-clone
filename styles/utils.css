@@ -1,0 +1,162 @@
+:root {
+  --black: #3f3f3f;
+  --white: #fdfdfd;
+  --pink: #e93380;
+  --creame: #ebeae4;
+  --cream-2: #f3f2ec;
+  --light-grey: #f5f5f5;
+  --grey: #dfdfdf;
+  --dark-grey: #a4a4a4;
+  --form-text-grey: #828282;
+  --font-almoni-regular: "Almoni-regular";
+  --font-almoni-medium: "Almoni-medium";
+  --font-almoni-bold: "Almoni-bold";
+}
+
+.logoImg {
+  width: min(30%, 7.563rem);
+  object-fit: contain;
+}
+
+hr {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 1.5rem;
+}
+
+ul li {
+  font-size: 1rem;
+}
+
+ul:last-child {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: var(--font-almoni-medium);
+  font-size: 60px;
+  font-weight: 500;
+  margin: unset;
+  margin-bottom: 1rem;
+  line-height: 3rem;
+}
+
+h2 {
+  margin: unset;
+  font-family: var(--font-almoni-medium);
+  font-weight: 400;
+}
+
+h3 {
+  margin: unset;
+  font-weight: 400;
+  font-family: var(--font-almoni-medium);
+}
+
+p {
+  line-height: 1.5rem;
+  margin: unset;
+}
+
+.pinkBtn {
+  width: 8rem;
+  height: 2.7rem;
+  border: none;
+  background-color: var(--pink);
+  color: var(--white);
+  border-radius: 0.6rem;
+  font-weight: bold;
+  transition: border-radius 500ms ease;
+}
+
+.pinkBtn:hover {
+  border-radius: 4rem;
+}
+
+.gridImg {
+  width: min(100%, 51.875rem);
+}
+.grid {
+  display: grid;
+  grid-auto-columns: auto;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+.subGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.subGrid > * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list {
+  color: var(--white);
+}
+
+.hamburger,
+.xIcon {
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 0.938rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    font-family: var(--font-almoni-medium);
+    font-weight: 400;
+    margin: unset;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 6rem;
+  }
+
+  .grid .text-item {
+    width: min(100%, 35.234rem);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .grid-2 {
+    margin-right: auto;
+  }
+
+  .grid-2 .text-item {
+    order: 1;
+  }
+
+  .grid-2 .gridImg {
+    order: 2;
+  }
+  .pinkBtn {
+    width: 10rem;
+  }
+}
